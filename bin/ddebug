@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker run -it -p 2345:2345 -v $(pwd):/src/template -w /src/template devkitpro/devkitarm /opt/devkitpro/devkitARM/bin/arm-none-eabi-gdb $@

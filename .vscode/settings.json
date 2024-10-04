@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "gba_console.h": "c",
+        "gba_systemcalls.h": "c",
+        "gba_video.h": "c",
+        "gba_base.h": "c",
+        "gba_types.h": "c",
+        "stdint.h": "c",
+        "_default_types.h": "c",
+        "limits.h": "c",
+        "syslimits.h": "c",
+        "cdefs.h": "c",
+        "features.h": "c",
+        "_intsup.h": "c",
+        "gba_interrupt.h": "c"
+    }
+}

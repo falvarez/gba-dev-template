@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "gdb-debug", 
+            "postDebugTask": "stop emulation",
+            "serverLaunchTimeout": 5000,
+            "stopAtEntry": true,
+            "program": "${workspaceFolder}/${workspaceFolderBasename}.elf",
+            "MIMode": "gdb",
+            "externalConsole": true,
+            "cwd": "${workspaceFolder}",
+            "targetArchitecture": "arm",
+            "miDebuggerServerAddress": "localhost:2345",
+            "osx":{
+                "miDebuggerPath": "/Users/fede/projects/GBA/template/bin/ddebug",
+                "setupCommands": [
+                    {
+                        "text": "shell open -a mGBA --args -g \"${workspaceFolder}/${workspaceFolderBasename}.elf\""
+                    }
+                ]
+            },
+        }
+    ]
+}
