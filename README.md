@@ -11,8 +11,12 @@ He configurado las siguientes tasks de VSCode:
 * `make release`
 * `make clean`
 
-He intentado configurar el depurador 
+Si desarrollo abriendo el proyecto en el dev container, funciona el intellisense sin problema, y puedo navegar por el código de las librerías (libgba en este caso).
 
-* Intellisense sólo va a funcionar dentro del contenedor docker
-* Puedo hacer make dentro y fuera, si configuro ambos
-* No consigo lanzar el depurador: me dice que el proceso no es un tty. ¿Tiene solución esto?
+He intentado configurar el depurador, que se lanza pulsando F5. Sin embargo, aunque el depurador parece funcionar si lo arranco en local, al hacerlo desde VSCode obtengo este error:
+
+```
+Starting: "/Users/fede/projects/GBA/template/bin/ddebug" --interpreter=mi
+the input device is not a TTY
+"/Users/fede/projects/GBA/template/bin/ddebug" exited with code 1 (0x1).
+```
