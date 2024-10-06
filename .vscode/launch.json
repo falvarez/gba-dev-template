@@ -19,7 +19,7 @@
             "targetArchitecture": "arm",
             "miDebuggerServerAddress": "localhost:2345",
             "osx":{
-                "miDebuggerPath": "/Users/fede/projects/GBA/template/bin/ddebug",
+                "miDebuggerPath": "${workspaceFolder}/bin/gdb",
                 "setupCommands": [
                     {
                         "text": "shell open -a mGBA --args -g \"${workspaceFolder}/${workspaceFolderBasename}.elf\""

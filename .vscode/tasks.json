@@ -6,13 +6,20 @@
         { 
             "label": "stop emulation",
             "type":"shell",
-            "command": "killall mGBA",
+            "osx": {
+                "command": "killall mGBA"
+            },
             "problemMatcher": []
         },
         {
             "label": "make debug",
             "type": "process",
-            "command": "bin/dmake",
+            "osx": {
+                "command": "bin/make"
+            },
+            "linux": {
+                "command": "make"
+            },
             "args": ["DEBUG=1"],
             "problemMatcher": []
         },
@@ -20,7 +27,7 @@
             "label": "make release",
             "type": "process",
             "osx": {
-                "command": "bin/dmake"
+                "command": "make"
             },
             "linux": {
                 "command": "make"
@@ -31,7 +38,12 @@
         {
             "label": "make clean",
             "type": "process",
-            "command": "bin/dmake",
+            "osx": {
+                "command": "${workspaceFolder}/bin/make"
+            },
+            "linux": {
+                "command": "make"
+            },
             "args": ["clean"],
             "problemMatcher": []
         },
@@ -40,7 +52,9 @@
             "dependsOn": ["make release"],
             "type": "shell",
             "isBackground": true,
-            "command": "open -a mGBA \"${workspaceFolder}/${workspaceFolderBasename}.gba\"",
+            "osx": {
+                "command": "open -a mGBA \"${workspaceFolder}/${workspaceFolderBasename}.gba\""
+            },
             "args": [],
             "problemMatcher": []
         },
