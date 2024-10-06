@@ -6,10 +6,8 @@ echo $DEVKITPRO
 
 if [ -z ${DEVKITPRO+x} ]; then
     # Use Docker to launch make
-    echo "DEVKITPRO KO"
     docker run -v $(pwd):/src/${CWD} -w /src/${CWD} devkitpro/devkitarm make $@
 else 
     # DevKitPro is installed locally
-    echo "DEVKITPRO OK"
     make $@
 fi

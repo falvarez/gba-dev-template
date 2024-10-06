@@ -7,10 +7,8 @@ echo ${DEVKITPRO}
 
 if [ -z ${DEVKITPRO+x} ]; then
     # Use Docker to launch debugger
-    echo "DEVKITPRO KO"
     docker run -it -p 2345:2345 -v $(pwd):/src/${CWD} -w /src/${CWD} devkitpro/devkitarm ${GDB} $@
 else
     # DevKitPro is installed locally
-    echo "DEVKITPRO OK"
     ${GDB} $@
 fi
